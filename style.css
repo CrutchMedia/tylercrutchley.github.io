@@ -115,7 +115,13 @@ h2 {
   background: #151515;
   border-radius: 8px;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.4s, background 0.4s;
+}
+
+.film:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.4); /* purple outer glow */
+  background: radial-gradient(circle at center, rgba(139, 92, 246, 0.15) 0%, rgba(0, 0, 0, 0.9) 70%);
 }
 
 .film img {
@@ -123,17 +129,11 @@ h2 {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   display: block;
-  pointer-events: none; /* this makes the image click-through */
+  border-radius: 8px 8px 0 0;
 }
 
 .film-info {
   padding: 1rem;
-  pointer-events: none; /* this makes text click-through too */
-}
-
-.film:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 20px rgba(138, 85, 246, 0.3);
 }
 
 /* Gallery */
